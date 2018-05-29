@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Instructors:</strong>
+  <%= @course.instructors %>
+</p>
+
+<p>
+  <strong>Sections:</strong>
+  <%= @course.sections %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @course.department %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @course.number %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @course.term %>
+</p>
+
+<p>
+  <strong>Booklist:</strong>
+  <%= @course.booklist %>
+</p>
+
+<h2>Books </h2>
+<%@course.books.each do |book| %>
+<p>
+  <strong>Book name</strong>
+  <%= book.title %>
+</p>
+<% end %>
+
+
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>
