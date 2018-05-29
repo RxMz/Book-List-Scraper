@@ -1,0 +1,441 @@
+Started GET "/" for 127.0.0.1 at 2018-05-29 14:53:54 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 13ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2018-05-29 14:53:58 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TermsController#index as HTML
+  Rendering terms/index.html.erb within layouts/application
+  [1m[36mTerm Load (0.2ms)[0m  [1m[34mSELECT `terms`.* FROM `terms`[0m
+  ↳ app/views/terms/index.html.erb:15
+  Rendered terms/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 682ms (Views: 676.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/terms/3" for 127.0.0.1 at 2018-05-29 14:54:04 -0400
+Processing by TermsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTerm Load (0.2ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/terms_controller.rb:67
+  Rendering terms/show.html.erb within layouts/application
+  Rendered terms/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2018-05-29 14:54:05 -0400
+Processing by TermsController#index as HTML
+  Rendering terms/index.html.erb within layouts/application
+  [1m[36mTerm Load (0.2ms)[0m  [1m[34mSELECT `terms`.* FROM `terms`[0m
+  ↳ app/views/terms/index.html.erb:15
+  Rendered terms/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/terms/new" for 127.0.0.1 at 2018-05-29 14:54:07 -0400
+Processing by TermsController#new as HTML
+  Rendering terms/new.html.erb within layouts/application
+  Rendered terms/_form.html.erb (41.0ms)
+  Rendered terms/new.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 80ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/terms" for 127.0.0.1 at 2018-05-29 14:54:09 -0400
+Processing by TermsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WlkkV/Keogj3PT1LH0ryfW99WIxWTDixSKRu6qE5zph20I6vVB1w29OJFrZCQIn5jnOIA9yftZYUco7K0z3Edw==", "term"=>{"term_code"=>"11", "term_description"=>"11"}, "commit"=>"Create Term"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/terms_controller.rb:30
+  [1m[36mTerm Create (0.2ms)[0m  [1m[32mINSERT INTO `terms` (`term_code`, `term_description`, `created_at`, `updated_at`) VALUES (11, '11', '2018-05-29 18:54:09', '2018-05-29 18:54:09')[0m
+  ↳ app/controllers/terms_controller.rb:30
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/terms_controller.rb:30
+Redirected to http://localhost:3000/terms/4
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/terms/4" for 127.0.0.1 at 2018-05-29 14:54:09 -0400
+Processing by TermsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTerm Load (0.3ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/terms_controller.rb:67
+  Rendering terms/show.html.erb within layouts/application
+  Rendered terms/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/terms" for 127.0.0.1 at 2018-05-29 14:54:10 -0400
+Processing by TermsController#index as HTML
+  Rendering terms/index.html.erb within layouts/application
+  [1m[36mTerm Load (0.3ms)[0m  [1m[34mSELECT `terms`.* FROM `terms`[0m
+  ↳ app/views/terms/index.html.erb:15
+  Rendered terms/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-05-29 14:54:33 -0400
+Processing by BookListsController#index as HTML
+  Rendering book_lists/index.html.erb within layouts/application
+  [1m[36mBookList Load (0.1ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/views/book_lists/index.html.erb:14
+  Rendered book_lists/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 28ms (Views: 23.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/book_lists/new" for 127.0.0.1 at 2018-05-29 14:54:36 -0400
+Processing by BookListsController#new as HTML
+  Rendering book_lists/new.html.erb within layouts/application
+  Rendered book_lists/_form.html.erb (1.6ms)
+  Rendered book_lists/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 25ms (Views: 19.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/book_lists" for 127.0.0.1 at 2018-05-29 14:54:37 -0400
+Processing by BookListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PuhJSJUzXuZ9X+QHEhgOkwV+SIlpT3TtXa0ENCydx+HNv0qgbVONiLTiJewjWM6HUu9SV3irTEeTIjvgr0+6ew==", "book_list"=>{"term_id"=>"33"}, "commit"=>"Create Book list"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[36mTerm Load (0.3ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 33 LIMIT 1[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  Rendering book_lists/new.html.erb within layouts/application
+  Rendered book_lists/_form.html.erb (2.0ms)
+  Rendered book_lists/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 31.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-05-29 14:54:39 -0400
+Processing by BookListsController#index as HTML
+  Rendering book_lists/index.html.erb within layouts/application
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/views/book_lists/index.html.erb:14
+  Rendered book_lists/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('6270947348305037790', 0)[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('6270947348305037790')[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/book_lists" for 127.0.0.1 at 2018-05-29 15:15:05 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BookListsController#index as HTML
+  Rendering book_lists/index.html.erb within layouts/application
+  [1m[36mBookList Load (0.1ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/views/book_lists/index.html.erb:14
+  Rendered book_lists/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 173ms (Views: 163.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/book_lists/new" for 127.0.0.1 at 2018-05-29 15:15:06 -0400
+Processing by BookListsController#new as HTML
+  Rendering book_lists/new.html.erb within layouts/application
+  Rendered book_lists/_form.html.erb (4.2ms)
+  Rendered book_lists/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 28ms (Views: 22.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/book_lists" for 127.0.0.1 at 2018-05-29 15:15:07 -0400
+Processing by BookListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C8+/OKs2QLg8xhL438Ma4oxH7kTMncoJK9LwibCFulLApoh5v3SxY+1T2P7+3xy8oMLFRztFaV1pHvVfZnaQAg==", "book_list"=>{"term_id"=>"222"}, "commit"=>"Create Book list"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[36mTerm Load (0.2ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 222 LIMIT 1[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  Rendering book_lists/new.html.erb within layouts/application
+  Rendered book_lists/_form.html.erb (1.4ms)
+  Rendered book_lists/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 18.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/book_lists" for 127.0.0.1 at 2018-05-29 15:16:18 -0400
+Processing by BookListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k6WrMU4UpEoeyEBApoeI9prGVB1bm6rBix39CIHS+MkLE5JEsvra7SR97fMg4ulLW7IR3PJm/X7BpEZohaPeZA==", "book_list"=>{"term_id"=>"A2018"}, "commit"=>"Create Book list"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[36mTerm Load (0.2ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  Rendering book_lists/new.html.erb within layouts/application
+  Rendered book_lists/_form.html.erb (1.5ms)
+  Rendered book_lists/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/book_lists" for 127.0.0.1 at 2018-05-29 15:17:21 -0400
+Processing by BookListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kBfiGUa3wwBk91q2PIl9vvGlVphGLoMSDo3bqZKeZiAIodtsulm9p15C9wW67BwDMNETWe/T1K1ENGDJlu9AjQ==", "book_list"=>{"term_id"=>"1"}, "commit"=>"Create Book list"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[36mTerm Load (0.3ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[36mBookList Create (0.3ms)[0m  [1m[32mINSERT INTO `book_lists` (`term_id`, `created_at`, `updated_at`) VALUES (1, '2018-05-29 19:17:21', '2018-05-29 19:17:21')[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+Redirected to http://localhost:3000/book_lists/1
+Completed 302 Found in 33ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/book_lists/1" for 127.0.0.1 at 2018-05-29 15:17:21 -0400
+Processing by BookListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` WHERE `book_lists`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/book_lists_controller.rb:67
+  Rendering book_lists/show.html.erb within layouts/application
+  [1m[36mTerm Load (0.2ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/book_lists/show.html.erb:5
+  Rendered book_lists/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-05-29 15:17:27 -0400
+Processing by BookListsController#index as HTML
+  Rendering book_lists/index.html.erb within layouts/application
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/views/book_lists/index.html.erb:14
+  [1m[36mTerm Load (0.1ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/book_lists/index.html.erb:16
+  Rendered book_lists/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/book_lists/1" for 127.0.0.1 at 2018-05-29 15:17:29 -0400
+Processing by BookListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookList Load (0.1ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` WHERE `book_lists`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/book_lists_controller.rb:67
+  Rendering book_lists/show.html.erb within layouts/application
+  [1m[36mTerm Load (0.1ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/book_lists/show.html.erb:5
+  Rendered book_lists/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-05-29 15:17:30 -0400
+Processing by BookListsController#index as HTML
+  Rendering book_lists/index.html.erb within layouts/application
+  [1m[36mBookList Load (0.1ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/views/book_lists/index.html.erb:14
+  [1m[36mTerm Load (0.1ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/book_lists/index.html.erb:16
+  Rendered book_lists/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2018-05-29 15:17:47 -0400
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  ↳ app/views/courses/index.html.erb:19
+  Rendered courses/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 21.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2018-05-29 15:17:49 -0400
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (3.1ms)
+  Rendered courses/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 26.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2018-05-29 15:18:40 -0400
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SbB2vj86w5X1Mk5zFXQb1D1CcUqLDIicXuPyRSAmJqfW9MjotGtBDEd9+8GQLY3lxueDHK8WQFUwE9xd0ucqow==", "course"=>{"instructors"=>"asqw", "sections"=>"11", "department"=>"11", "number"=>"11", "term"=>"1", "booklist_id"=>"12"}, "commit"=>"Create Course"}
+Unpermitted parameter: :booklist_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/courses_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/courses_controller.rb:30
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (2.6ms)
+  Rendered courses/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2018-05-29 15:18:42 -0400
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C5Cqo8vSrmplaa4UNUrclW98PuFehmuXbEmLhhBu2AaTJpPWNzzQzV/cA6ezL70orgh7IPd7PCgm8DDmFB/+qw==", "course"=>{"instructors"=>"asqw", "sections"=>"11", "department"=>"11", "number"=>"11", "term"=>"1", "booklist_id"=>"1"}, "commit"=>"Create Course"}
+Unpermitted parameter: :booklist_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/courses_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/courses_controller.rb:30
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (2.5ms)
+  Rendered courses/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2018-05-29 15:18:44 -0400
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+ZmNXZGXIBHHiM1y6o/fnaR5A1Ek1mrO42scASN1O6JhL7QobXletv09YMFs6r4gZQ1GkI0rPXGp0qdhJwQdDw==", "course"=>{"instructors"=>"asqw", "sections"=>"11", "department"=>"11", "number"=>"11", "term"=>"1", "booklist_id"=>""}, "commit"=>"Create Course"}
+Unpermitted parameter: :booklist_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/courses_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/courses_controller.rb:30
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (2.6ms)
+  Rendered courses/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2018-05-29 15:18:49 -0400
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lc2xCm/sHYk3unmK0Z/RnAbyM3scA2xU0ygEIEyWqa4Ne4h/kwJjLg0P1DlX+rAhx4Z2urX+O+uZkb9ASOePAw==", "course"=>{"instructors"=>"asqw", "sections"=>"11", "department"=>"11", "number"=>"11", "term"=>"1", "booklist_id"=>"1"}, "commit"=>"Create Course"}
+Unpermitted parameter: :booklist_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/courses_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/courses_controller.rb:30
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (2.5ms)
+  Rendered courses/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-05-29 15:18:58 -0400
+Processing by BookListsController#index as HTML
+  Rendering book_lists/index.html.erb within layouts/application
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/views/book_lists/index.html.erb:14
+  [1m[36mTerm Load (0.1ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/book_lists/index.html.erb:16
+  Rendered book_lists/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/book_lists/new" for 127.0.0.1 at 2018-05-29 15:19:07 -0400
+Processing by BookListsController#new as HTML
+  Rendering book_lists/new.html.erb within layouts/application
+  Rendered book_lists/_form.html.erb (1.8ms)
+  Rendered book_lists/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/book_lists" for 127.0.0.1 at 2018-05-29 15:19:12 -0400
+Processing by BookListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4hSx/7aCJ96iLZ2hC9Bo6ULAPdOQltOexR6g5Xdfk+opfYa+osDWBXO4V6cqzG63bkUW0GdOcMqH0qUzoay5ug==", "book_list"=>{"term_id"=>"1"}, "commit"=>"Create Book list"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[36mTerm Load (0.1ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[36mBookList Create (0.2ms)[0m  [1m[32mINSERT INTO `book_lists` (`term_id`, `created_at`, `updated_at`) VALUES (1, '2018-05-29 19:19:12', '2018-05-29 19:19:12')[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+Redirected to http://localhost:3000/book_lists/2
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/book_lists/2" for 127.0.0.1 at 2018-05-29 15:19:12 -0400
+Processing by BookListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` WHERE `book_lists`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/book_lists_controller.rb:67
+  Rendering book_lists/show.html.erb within layouts/application
+  [1m[36mTerm Load (0.1ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/book_lists/show.html.erb:5
+  Rendered book_lists/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-05-29 15:19:13 -0400
+Processing by BookListsController#index as HTML
+  Rendering book_lists/index.html.erb within layouts/application
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/views/book_lists/index.html.erb:14
+  [1m[36mTerm Load (0.1ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/book_lists/index.html.erb:16
+  [1m[36mCACHE Term Load (0.0ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` WHERE `terms`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_lists/index.html.erb:16
+  Rendered book_lists/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2018-05-29 15:19:27 -0400
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses`[0m
+  ↳ app/views/courses/index.html.erb:19
+  Rendered courses/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2018-05-29 15:19:29 -0400
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (3.2ms)
+  Rendered courses/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2018-05-29 15:19:38 -0400
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cncyaT69Qk2Cu1QtRT1r72WwQWpFMUQFE6CSqc4/RHDtM4w/tezA1DD04Z/AZP3enhWzPGErjMx9ULyxPP5IdA==", "course"=>{"instructors"=>"123", "sections"=>"1243", "department"=>"124", "number"=>"12", "term"=>"1", "booklist_id"=>"1"}, "commit"=>"Create Course"}
+Unpermitted parameter: :booklist_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/courses_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/courses_controller.rb:30
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (2.7ms)
+  Rendered courses/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2018-05-29 15:19:41 -0400
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CibdhuOD2StwmRRquGPmSeS7oMyeTEhFLyyjDYtsKHWSkOTzH22njEosudk+Bof0Jc/lDTexH/pllRhtjx0O2A==", "course"=>{"instructors"=>"123", "sections"=>"1243", "department"=>"124", "number"=>"12", "term"=>"1", "booklist_id"=>"#<Term:0x00007f8c68076498>"}, "commit"=>"Create Course"}
+Unpermitted parameter: :booklist_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/courses_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/courses_controller.rb:30
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (2.8ms)
+  Rendered courses/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 27ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2018-05-29 15:19:48 -0400
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JC1kv9U+8UdVRuUP8qAhnLghk5dgh4yIqvI2FDYkHQi8m13KKdCP4G/zSLx0xUAheVXWVsl62zfgS410MlU7pQ==", "course"=>{"instructors"=>"123", "sections"=>"1243", "department"=>"124", "number"=>"12", "term"=>"1", "booklist_id"=>"<Term:0x00007f8c68076498>"}, "commit"=>"Create Course"}
+Unpermitted parameter: :booklist_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/courses_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/courses_controller.rb:30
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (2.6ms)
+  Rendered courses/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.2ms)
+
+
