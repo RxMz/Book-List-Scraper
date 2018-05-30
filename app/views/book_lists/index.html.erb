@@ -13,7 +13,7 @@
   <tbody>
     <% @book_lists.each do |book_list| %>
       <tr>
-        <td><%= book_list.term %></td>
+        <td><%= book_list.term_id %></td>
         <td><%= link_to 'Show', book_list %></td>
         <td><%= link_to 'Edit', edit_book_list_path(book_list) %></td>
         <td><%= link_to 'Destroy', book_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -27,7 +27,7 @@
 
 <p>
   <strong>Booklist:</strong>
-  <%= @course.booklist %>
+  <%= @course.book_list_id %>
 </p>
 
 <h2>Books </h2>
@@ -37,8 +37,6 @@
   <%= book.title %>
 </p>
 <% end %>
-
-
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>

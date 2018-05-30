@@ -2,8 +2,20 @@
 
 <p>
   <strong>Term:</strong>
-  <%= @book_list.term %>
+  <%= @book_list.term_id %>
 </p>
+
+
+<h2> Courses: </h2>
+<%@book_list.courses.each do |course| %>
+<p>
+  <strong>Course name</strong>
+  <%= course.id %>
+  <strong>Course instructors</strong>
+  <%= course.instructors %>
+</p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_book_list_path(@book_list) %> |
 <%= link_to 'Back', book_lists_path %>

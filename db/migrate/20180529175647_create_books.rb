@@ -9,7 +9,7 @@ class CreateBooks < ActiveRecord::Migration[5.2]
       t.boolean :reqopt
       t.string :term
       t.integer :book_id
-      t.references :courses, foreign_key: true
+      t.references :course, foreign_key: true
 
       t.timestamps
     end

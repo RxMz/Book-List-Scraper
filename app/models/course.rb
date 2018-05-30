@@ -1,4 +1,4 @@
 class Course < ApplicationRecord
-  belongs_to :booklist
+  belongs_to :book_list
   has_many :books
 end

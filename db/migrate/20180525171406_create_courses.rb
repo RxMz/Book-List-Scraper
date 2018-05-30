@@ -6,9 +6,11 @@ class CreateCourses < ActiveRecord::Migration[5.2]
       t.string :department
       t.integer :number
       t.string :term
-      t.references :book_list, foreign_key: true
+     # t.integer :book_list, foreign_key: true,
+      t.references :book_list , foreign_key: true
 
       t.timestamps
     end
   end
 end
+  
