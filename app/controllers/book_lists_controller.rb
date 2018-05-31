@@ -7,6 +7,10 @@ class BookListsController < ApplicationController
     @book_lists = BookList.all
   end
 
+  def string_generator
+    some_string = ""
+  end
+
   # GET /book_lists/1
   # GET /book_lists/1.json
   def show

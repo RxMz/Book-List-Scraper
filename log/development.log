@@ -3806,3 +3806,80 @@ Processing by TermsController#show as HTML
 Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/terms" for 127.0.0.1 at 2018-05-30 13:32:20 -0400
+Processing by TermsController#index as HTML
+  Rendering terms/index.html.erb within layouts/application
+  [1m[36mTerm Load (0.2ms)[0m  [1m[34mSELECT `terms`.* FROM `terms`[0m
+  ↳ app/views/terms/index.html.erb:15
+  Rendered terms/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-31 15:19:29 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 14ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-31 15:20:27 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/" for 127.0.0.1 at 2018-05-31 15:20:37 -0400
+Processing by TermsController#index as HTML
+  Rendering terms/index.html.erb within layouts/application
+  [1m[36mTerm Load (2.1ms)[0m  [1m[34mSELECT `terms`.* FROM `terms`[0m
+  ↳ app/views/terms/index.html.erb:15
+  Rendered terms/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 222ms (Views: 205.5ms | ActiveRecord: 3.4ms)
+
+
+Processing by TermsController#index as HTML
+  Rendering terms/index.html.erb within layouts/application
+  [1m[36mTerm Load (0.2ms)[0m  [1m[34mSELECT `terms`.* FROM `terms`[0m
+  ↳ app/views/terms/index.html.erb:15
+  Rendered terms/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 43ms (Views: 38.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-31 15:21:10 -0400
+Processing by TermsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (Hey):
+  
+app/controllers/terms_controller.rb:8:in `index'
+Started PUT "/__web_console/repl_sessions/d3feeea1c25d93565f134ff961304221" for 127.0.0.1 at 2018-05-31 15:21:20 -0400
+Started PUT "/__web_console/repl_sessions/d3feeea1c25d93565f134ff961304221" for 127.0.0.1 at 2018-05-31 15:21:21 -0400
+  [1m[36mTerm Load (0.8ms)[0m  [1m[34mSELECT  `terms`.* FROM `terms` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/" for 127.0.0.1 at 2018-05-31 15:32:49 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TermsController#index as HTML
+  Rendering terms/index.html.erb within layouts/application
+  [1m[36mTerm Load (0.2ms)[0m  [1m[34mSELECT `terms`.* FROM `terms`[0m
+  ↳ app/views/terms/index.html.erb:15
+  Rendered terms/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 211ms (Views: 200.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-31 15:37:34 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TermsController#index as HTML
+  Rendering terms/index.html.erb within layouts/application
+  [1m[36mTerm Load (0.1ms)[0m  [1m[34mSELECT `terms`.* FROM `terms`[0m
+  ↳ app/views/terms/index.html.erb:15
+  Rendered terms/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 1.1ms)
+
+

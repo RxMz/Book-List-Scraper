@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+	root 'terms#index'
   resources :courses do 
   	resources :book
   end
