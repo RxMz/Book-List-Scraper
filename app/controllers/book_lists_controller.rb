@@ -9,6 +9,38 @@ class BookListsController < ApplicationController
 
   def string_generator
     some_string = ""
+    @book_lists.each { |book_list|
+      book_list.courses.each { |course|
+        temp = course.department
+        course.books.each { |book|
+          some_string << book.author
+          some_stirng << temp
+        }
+      }
+     }
+  end
+
+  def book_record_generator(s)
+    department = s[0...7]
+    course_number = s[7...13]
+    edition = s[13...45]
+    isbn = s[45...59]
+    isbn_integer = s[49...58]
+    author = s[59...83]
+    title = s[83...138]
+    price = s[138...144]
+    unused = s[144...153]
+    publisher = s[153...163]
+    to_add_in_file = "Department: " + department + "\n"
+    to_add_in_file += "Course Number: " + course_number + "\n"
+    to_add_in_file += "Edition: " + edition + "\n" 
+    to_add_in_file += "ISBN: " + isbn + "\n"
+    to_add_in_file += "ISBN (int only): " + isbn_integer + "\n" 
+    to_add_in_file += "Author: " + author + "\n" 
+    to_add_in_file +=  "Title: " + title + "\n" 
+    to_add_in_file += "Price: " + price + "\n" +
+    to_add_in_file += "Publisher: " + publisher
+    puts to_add_in_file
   end
 
   # GET /book_lists/1
