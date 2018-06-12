@@ -7,7 +7,7 @@ class BookListsController < ApplicationController
     @book_lists = BookList.all
     string_generator()
 
-    render plain: @some_string
+    render plain: @entries
   end
 
   # does the same as string_generator
@@ -17,30 +17,30 @@ class BookListsController < ApplicationController
 
 # TODO clean up
   def string_generator
-    @some_string = ""
+    @entries = ""
     @book_lists.each { |book_list|
       book_list.courses.each { |course|
-        dep = course.department
-        number = course.number
+        department = course.department
+        course_number = course.number
         course.books.each { |book|
-          @some_string += sprintf("%-7s", dep) # department
-          @some_string += sprintf("%-6d", number) # course number
-          @some_string += sprintf("%-32s", "") # book edition
-          @some_string += sprintf("%-14s", "") # ISBN
-          @some_string += sprintf("%-9s", "") # ISBN INT
-          @some_string += sprintf("%-24s", book.author) # author
-          @some_string += sprintf("%-55s", book.title) # book title
-          @some_string += sprintf("%-5.2f", book.price) # book price
-          @some_string += sprintf("%-10s", book.publisher)  # book publisher 
+          @entries += sprintf("%-7s", department) 
+          @entries += sprintf("%-6d", course_number) 
+          @entries += sprintf("%-32s", "") # book edition
+          @entries += sprintf("%-14s", "") # ISBN
+          @entries += sprintf("%-9s", "") # ISBN INT
+          @entries += sprintf("%-24s", book.author) 
+          @entries += sprintf("%-55s", book.title) 
+          @entries += sprintf("%-5.2f", book.price) 
+          @entries += sprintf("%-10s", book.publisher) 
         }
-        @some_string += "\n"
+        @entries += "\n" #creating new line after every entry
       }
     }
   end
 
 # 3) make this asynchronously
   def file_generator
-    send_data(@some_string, :filename => "textfile.txt")
+    send_data(@entries, :filename => "textfile.txt")
   end
 
   # GET /book_lists/1
