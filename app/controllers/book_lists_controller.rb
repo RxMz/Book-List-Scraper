@@ -1,4 +1,4 @@
-class BookListsController < ApplicationController
+class BookLitssController < ApplicationController
   before_action :set_book_list, only: [:show, :edit, :update, :destroy]
 
   # GET /book_lists
@@ -6,14 +6,12 @@ class BookListsController < ApplicationController
   def index
     @book_lists = BookList.all
     string_generator()
-
     render plain: @entries
   end
 
   # does the same as string_generator
   # given book_list_id ( Integer )
 
-#
 
 # TODO clean up
   def string_generator
@@ -34,8 +32,15 @@ class BookListsController < ApplicationController
           @entries += sprintf("%-10s", book.publisher) 
         }
         @entries += "\n" #creating new line after every entry
+        #increment some instance variable
+        # call a func
       }
     }
+  end
+
+  def some_func
+    # change the text on user
+    @rishabh = "Rishabh"
   end
 
 # 3) make this asynchronously
