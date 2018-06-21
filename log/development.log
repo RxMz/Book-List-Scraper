@@ -6831,3 +6831,1954 @@ Processing by BookListsController#index as HTML
 Completed 200 OK in 56ms (Views: 0.6ms | ActiveRecord: 5.6ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` ORDER BY `book_lists`.`id` DESC LIMIT 1[0m
+  [1m[36mBookList Load (0.5ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` ORDER BY `book_lists`.`id` DESC LIMIT 1[0m
+  [1m[36mBookList Load (0.9ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` ORDER BY `book_lists`.`id` ASC LIMIT 1[0m
+  [1m[36mBookList Load (1.1ms)[0m  [1m[34mSELECT  `book_lists`.`id` FROM `book_lists` LIMIT 11[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `book_lists`.`id` FROM `book_lists`[0m
+Started GET "/sidekiq" for 127.0.0.1 at 2018-06-20 11:56:50 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+Redis::CannotConnectError (Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)):
+  
+redis (4.0.1) lib/redis/client.rb:344:in `rescue in establish_connection'
+redis (4.0.1) lib/redis/client.rb:328:in `establish_connection'
+redis (4.0.1) lib/redis/client.rb:99:in `block in connect'
+redis (4.0.1) lib/redis/client.rb:291:in `with_reconnect'
+redis (4.0.1) lib/redis/client.rb:98:in `connect'
+redis (4.0.1) lib/redis/client.rb:363:in `ensure_connected'
+redis (4.0.1) lib/redis/client.rb:219:in `block in process'
+redis (4.0.1) lib/redis/client.rb:304:in `logging'
+redis (4.0.1) lib/redis/client.rb:218:in `process'
+redis (4.0.1) lib/redis/client.rb:118:in `call'
+redis (4.0.1) lib/redis.rb:274:in `block in info'
+redis (4.0.1) lib/redis.rb:45:in `block in synchronize'
+/home/rishabh/.rbenv/versions/2.5.1/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+redis (4.0.1) lib/redis.rb:45:in `synchronize'
+redis (4.0.1) lib/redis.rb:273:in `info'
+sidekiq (5.1.3) lib/sidekiq.rb:113:in `block in redis_info'
+sidekiq (5.1.3) lib/sidekiq.rb:95:in `block in redis'
+connection_pool (2.2.2) lib/connection_pool.rb:65:in `block (2 levels) in with'
+connection_pool (2.2.2) lib/connection_pool.rb:64:in `handle_interrupt'
+connection_pool (2.2.2) lib/connection_pool.rb:64:in `block in with'
+connection_pool (2.2.2) lib/connection_pool.rb:61:in `handle_interrupt'
+connection_pool (2.2.2) lib/connection_pool.rb:61:in `with'
+sidekiq (5.1.3) lib/sidekiq.rb:92:in `redis'
+sidekiq (5.1.3) lib/sidekiq.rb:106:in `redis_info'
+sidekiq (5.1.3) lib/sidekiq/web/helpers.rb:162:in `redis_info'
+sidekiq (5.1.3) lib/sidekiq/web/application.rb:32:in `block in <class:WebApplication>'
+sidekiq (5.1.3) lib/sidekiq/web/application.rb:266:in `instance_exec'
+sidekiq (5.1.3) lib/sidekiq/web/application.rb:266:in `block in call'
+sidekiq (5.1.3) lib/sidekiq/web/application.rb:262:in `catch'
+sidekiq (5.1.3) lib/sidekiq/web/application.rb:262:in `call'
+/home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/bundler/gems/sinatra-47a990d9a86c/rack-protection/lib/rack/protection/xss_header.rb:18:in `call'
+/home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/bundler/gems/sinatra-47a990d9a86c/rack-protection/lib/rack/protection/base.rb:50:in `call'
+/home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/bundler/gems/sinatra-47a990d9a86c/rack-protection/lib/rack/protection/base.rb:50:in `call'
+/home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/bundler/gems/sinatra-47a990d9a86c/rack-protection/lib/rack/protection/path_traversal.rb:16:in `call'
+/home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/bundler/gems/sinatra-47a990d9a86c/rack-protection/lib/rack/protection/json_csrf.rb:26:in `call'
+/home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/bundler/gems/sinatra-47a990d9a86c/rack-protection/lib/rack/protection/base.rb:50:in `call'
+/home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/bundler/gems/sinatra-47a990d9a86c/rack-protection/lib/rack/protection/base.rb:50:in `call'
+/home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/bundler/gems/sinatra-47a990d9a86c/rack-protection/lib/rack/protection/frame_options.rb:31:in `call'
+/home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/bundler/gems/sinatra-47a990d9a86c/rack-protection/lib/rack/protection/base.rb:50:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+rack (2.0.5) lib/rack/urlmap.rb:68:in `block in call'
+rack (2.0.5) lib/rack/urlmap.rb:53:in `each'
+rack (2.0.5) lib/rack/urlmap.rb:53:in `call'
+rack (2.0.5) lib/rack/builder.rb:153:in `call'
+sidekiq (5.1.3) lib/sidekiq/web.rb:103:in `call'
+sidekiq (5.1.3) lib/sidekiq/web.rb:108:in `call'
+actionpack (5.2.0) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (5.2.0) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sidekiq" for 127.0.0.1 at 2018-06-20 11:57:08 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2018-06-20 11:57:08 -0400
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2018-06-20 11:57:08 -0400
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2018-06-20 11:57:08 -0400
+Started GET "/sidekiq/javascripts/dashboard.js" for 127.0.0.1 at 2018-06-20 11:57:08 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/sidekiq/images/status.png" for 127.0.0.1 at 2018-06-20 11:57:08 -0400
+Started GET "/sidekiq/images/favicon.ico" for 127.0.0.1 at 2018-06-20 11:57:08 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:57:13 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:57:26 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:57:31 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:57:36 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:57:41 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:57:46 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:57:51 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:57:56 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:58:01 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:58:06 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:58:11 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:58:16 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:58:21 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:58:26 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:58:31 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:58:36 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:58:41 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:58:46 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:58:51 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:58:56 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:59:01 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:59:06 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:59:11 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:59:16 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:59:21 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:59:26 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:59:31 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:59:36 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:59:41 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:59:46 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:59:51 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 11:59:56 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:00:01 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:00:06 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:00:11 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:00:16 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:00:21 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:00:26 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:00:31 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:00:36 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:00:41 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:00:46 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:00:51 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:00:56 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:01:01 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:01:06 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:01:11 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:01:16 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:01:21 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:01:26 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:01:31 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:01:36 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:01:41 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:01:46 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:01:51 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:01:56 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:02:01 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:02:06 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:02:11 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:02:16 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:02:21 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:02:26 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:02:31 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:02:36 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:02:41 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:02:46 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:02:51 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:02:56 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:03:01 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:03:06 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:03:11 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:03:16 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:03:21 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:03:26 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:03:31 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:03:36 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:03:41 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:03:46 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:03:51 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:03:56 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:04:01 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:04:06 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:04:11 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:04:16 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:04:21 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:04:26 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:04:31 -0400
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2018-06-20 12:04:36 -0400
+Started GET "/" for 127.0.0.1 at 2018-06-20 12:04:40 -0400
+Processing by TermsController#index as HTML
+  Rendering terms/index.html.erb within layouts/application
+  [1m[36mTerm Load (8.8ms)[0m  [1m[34mSELECT `terms`.* FROM `terms`[0m
+  ↳ app/views/terms/index.html.erb:15
+  Rendered terms/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 308ms (Views: 285.7ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-20 12:04:44 -0400
+  
+LoadError (Unable to autoload constant BookListsController, expected /home/rishabh/Desktop/Book-List-Scraper/app/controllers/book_lists_controller.rb to define it):
+  
+activesupport (5.2.0) lib/active_support/dependencies.rb:503:in `load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.0) lib/active_support/dependencies.rb:574:in `get'
+activesupport (5.2.0) lib/active_support/dependencies.rb:605:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-20 12:04:56 -0400
+  
+LoadError (Unable to autoload constant BookListsController, expected /home/rishabh/Desktop/Book-List-Scraper/app/controllers/book_lists_controller.rb to define it):
+  
+activesupport (5.2.0) lib/active_support/dependencies.rb:503:in `load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.0) lib/active_support/dependencies.rb:574:in `get'
+activesupport (5.2.0) lib/active_support/dependencies.rb:605:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book_list" for 127.0.0.1 at 2018-06-20 12:05:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/book_list"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-20 12:05:25 -0400
+  
+LoadError (Unable to autoload constant BookListsController, expected /home/rishabh/Desktop/Book-List-Scraper/app/controllers/book_lists_controller.rb to define it):
+  
+activesupport (5.2.0) lib/active_support/dependencies.rb:503:in `load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.0) lib/active_support/dependencies.rb:574:in `get'
+activesupport (5.2.0) lib/active_support/dependencies.rb:605:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-20 12:05:46 -0400
+  
+LoadError (Unable to autoload constant BookListsController, expected /home/rishabh/Desktop/Book-List-Scraper/app/controllers/book_lists_controller.rb to define it):
+  
+activesupport (5.2.0) lib/active_support/dependencies.rb:503:in `load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.0) lib/active_support/dependencies.rb:574:in `get'
+activesupport (5.2.0) lib/active_support/dependencies.rb:605:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-20 12:06:03 -0400
+  
+LoadError (Unable to autoload constant BookListsController, expected /home/rishabh/Desktop/Book-List-Scraper/app/controllers/book_lists_controller.rb to define it):
+  
+activesupport (5.2.0) lib/active_support/dependencies.rb:503:in `load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.0) lib/active_support/dependencies.rb:574:in `get'
+activesupport (5.2.0) lib/active_support/dependencies.rb:605:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-20 12:06:04 -0400
+  
+LoadError (Unable to autoload constant BookListsController, expected /home/rishabh/Desktop/Book-List-Scraper/app/controllers/book_lists_controller.rb to define it):
+  
+activesupport (5.2.0) lib/active_support/dependencies.rb:503:in `load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.0) lib/active_support/dependencies.rb:574:in `get'
+activesupport (5.2.0) lib/active_support/dependencies.rb:605:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:07:15 -0400
+  
+LoadError (Unable to autoload constant BookListsController, expected /home/rishabh/Desktop/Book-List-Scraper/app/controllers/book_lists_controller.rb to define it):
+  
+activesupport (5.2.0) lib/active_support/dependencies.rb:503:in `load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.0) lib/active_support/dependencies.rb:574:in `get'
+activesupport (5.2.0) lib/active_support/dependencies.rb:605:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:08:48 -0400
+  
+LoadError (Unable to autoload constant BookListsController, expected /home/rishabh/Desktop/Book-List-Scraper/app/controllers/book_lists_controller.rb to define it):
+  
+activesupport (5.2.0) lib/active_support/dependencies.rb:503:in `load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.0) lib/active_support/dependencies.rb:574:in `get'
+activesupport (5.2.0) lib/active_support/dependencies.rb:605:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:09:13 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:19:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:09:23 -0400
+  
+LoadError (Unable to autoload constant BookListsController, expected /home/rishabh/Desktop/Book-List-Scraper/app/controllers/book_lists_controller.rb to define it):
+  
+activesupport (5.2.0) lib/active_support/dependencies.rb:503:in `load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/dependencies.rb:193:in `const_missing'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.0) lib/active_support/dependencies.rb:574:in `get'
+activesupport (5.2.0) lib/active_support/dependencies.rb:605:in `constantize'
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.0) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:09:30 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:19:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:09:45 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:19:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:09:46 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:19:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:10:03 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:19:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:10:47 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:19:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:19:35 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:19:36 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:19:36 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:19:36 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 12:19:37 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started POST "/__web_console/repl_sessions/2f304db937853d76cf2a45d84a68e468/trace" for 127.0.0.1 at 2018-06-20 12:19:39 -0400
+Started POST "/__web_console/repl_sessions/2f304db937853d76cf2a45d84a68e468/trace" for 127.0.0.1 at 2018-06-20 12:19:40 -0400
+Started POST "/__web_console/repl_sessions/2f304db937853d76cf2a45d84a68e468/trace" for 127.0.0.1 at 2018-06-20 12:44:51 -0400
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-20 12:56:06 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (2.5ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:21
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:22
+  [1m[36mBook Load (7.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:22
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:22
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:22
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 123ms (Views: 9.3ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 13:08:13 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-20 13:10:15 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:21
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:22
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:22
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:22
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:22
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data textfile.txt (0.7ms)
+Completed 200 OK in 49ms (Views: 0.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-20 13:10:56 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:21
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:22
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:22
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:22
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:22
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data textfile.txt (0.3ms)
+Completed 500 Internal Server Error in 56ms (Views: 0.6ms | ActiveRecord: 6.3ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/book_lists_controller.rb:45:in `file_generator'
+app/controllers/book_lists_controller.rb:9:in `index'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 13:11:06 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 13:11:18 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 13:12:35 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 13:12:35 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 13:12:43 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 13:12:44 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 13:12:52 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 13:13:51 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 13:13:54 -0400
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists_generator" for 127.0.0.1 at 2018-06-20 13:13:54 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BookListsController#string_generator as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/book_lists_controller.rb:21:in `string_generator'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-20 13:13:59 -0400
+Processing by BookListsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError ("88ca7942a6fa98d76db1e0ea"):
+  
+app/controllers/book_lists_controller.rb:44:in `file_generator'
+app/controllers/book_lists_controller.rb:9:in `index'
+Started GET "/" for 127.0.0.1 at 2018-06-21 15:17:21 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by TermsController#index as HTML
+  Rendering terms/index.html.erb within layouts/application
+  [1m[36mTerm Load (2.1ms)[0m  [1m[34mSELECT `terms`.* FROM `terms`[0m
+  ↳ app/views/terms/index.html.erb:15
+  Rendered terms/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 266ms (Views: 250.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:17:26 -0400
+Processing by BookListsController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+Redis::CannotConnectError (Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)):
+  
+app/controllers/book_lists_controller.rb:46:in `file_generator'
+app/controllers/book_lists_controller.rb:9:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:17:42 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (2.4ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:24
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 11.4ms)
+
+
+  
+NameError (uninitialized constant BookListsController::Firebasae):
+  
+app/controllers/book_lists_controller.rb:11:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:17:57 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:24
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 4.8ms)
+
+
+  
+NameError (uninitialized constant BookListsController::Firebase):
+  
+app/controllers/book_lists_controller.rb:11:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:18:18 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.1ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:24
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 4.9ms)
+
+
+  
+NameError (uninitialized constant BookListsController::Firebase):
+  
+app/controllers/book_lists_controller.rb:11:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:18:49 -0400
+Processing by BookListsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant BookListsController::Firebase):
+  
+app/controllers/book_lists_controller.rb:11:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:20:12 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BookListsController#index as HTML
+  Rendering book_lists/index.html.erb within layouts/application
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/views/book_lists/index.html.erb:14
+  Rendered book_lists/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 323ms (Views: 129.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:22:36 -0400
+Processing by BookListsController#index as HTML
+  Rendering book_lists/index.html.erb within layouts/application
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/views/book_lists/index.html.erb:14
+  Rendered book_lists/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 279ms (Views: 59.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:22:40 -0400
+Processing by BookListsController#index as HTML
+  Rendering book_lists/index.html.erb within layouts/application
+  [1m[36mBookList Load (0.4ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/views/book_lists/index.html.erb:14
+  Rendered book_lists/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 219ms (Views: 25.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:32:52 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 259ms (Views: 2.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:33:00 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.1ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 188ms (Views: 0.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:33:41 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 224ms (Views: 1.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:34:05 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 5.6ms)
+
+
+  
+NoMethodError (undefined method `name' for {"name"=>"-LFYpinadLYmUrR65JpU"}:Hash):
+  
+app/controllers/book_lists_controller.rb:13:in `index'
+Started GET "/" for 127.0.0.1 at 2018-06-21 15:39:02 -0400
+Processing by TermsController#index as HTML
+  Rendering terms/index.html.erb within layouts/application
+  [1m[36mTerm Load (0.2ms)[0m  [1m[34mSELECT `terms`.* FROM `terms`[0m
+  ↳ app/views/terms/index.html.erb:15
+  Rendered terms/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 27ms (Views: 23.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:39:11 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:25
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:26
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 272ms (Views: 1.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:40:24 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.1ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:27
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 226ms (Views: 1.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:40:30 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:27
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 192ms (Views: 1.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:47:23 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE BookList Load (0.0ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE BookList Load (0.0ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NameError (undefined local variable or method `base_uri' for #<BookListsController:0x00007fdb0037c250>
+Did you mean?  @base_uri):
+  
+app/controllers/book_lists_controller.rb:10:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:47:42 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE BookList Load (0.0ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 254ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE BookList Load (0.0ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NameError (undefined local variable or method `firebase' for #<BookListsController:0x00007fdb0a4f34a8>
+Did you mean?  @firebase):
+  
+app/controllers/book_lists_controller.rb:11:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:47:57 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE BookList Load (0.0ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 354ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE BookList Load (0.0ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NameError (undefined local variable or method `resp' for #<BookListsController:0x00007fdb00133520>
+Did you mean?  @resp):
+  
+app/controllers/book_lists_controller.rb:13:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:48:06 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+Completed 500 Internal Server Error in 375ms (ActiveRecord: 4.8ms)
+
+
+  
+NameError (undefined local variable or method `firebase' for #<BookListsController:0x00007fdb0a5193d8>
+Did you mean?  @firebase):
+  
+app/controllers/book_lists_controller.rb:45:in `block (2 levels) in string_generator'
+app/controllers/book_lists_controller.rb:29:in `block in string_generator'
+app/controllers/book_lists_controller.rb:28:in `string_generator'
+app/controllers/book_lists_controller.rb:14:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:48:13 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+Completed 500 Internal Server Error in 331ms (ActiveRecord: 4.7ms)
+
+
+  
+NameError (undefined local variable or method `firebase' for #<BookListsController:0x00007fdb04182608>
+Did you mean?  @firebase):
+  
+app/controllers/book_lists_controller.rb:45:in `block (2 levels) in string_generator'
+app/controllers/book_lists_controller.rb:29:in `block in string_generator'
+app/controllers/book_lists_controller.rb:28:in `string_generator'
+app/controllers/book_lists_controller.rb:14:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:48:22 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 605ms (Views: 1.0ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:48:41 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.5ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:28
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:29
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:32
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 565ms (Views: 0.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:49:30 -0400
+Processing by BookListsController#index as HTML
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 223ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:50:24 -0400
+Processing by BookListsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2..3)):
+  
+app/controllers/book_lists_controller.rb:11:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:51:04 -0400
+Processing by BookListsController#index as HTML
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 224ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:53:04 -0400
+Processing by BookListsController#index as HTML
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 263ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:53:11 -0400
+Processing by BookListsController#index as HTML
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 225ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:53:35 -0400
+Processing by BookListsController#index as HTML
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 239ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:55:50 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE BookList Load (0.0ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE BookList Load (0.0ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NameError (undefined local variable or method `child_key' for #<BookListsController:0x00007fdb0009fe60>
+Did you mean?  @child_key):
+  
+app/controllers/book_lists_controller.rb:54:in `checker'
+app/controllers/book_lists_controller.rb:15:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:55:57 -0400
+Processing by BookListsController#index as HTML
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 225ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:56:07 -0400
+Processing by BookListsController#index as HTML
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 224ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:56:29 -0400
+Processing by BookListsController#index as HTML
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 225ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:57:18 -0400
+Processing by BookListsController#index as HTML
+Completed 500 Internal Server Error in 173ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/book_lists_controller.rb:51:in `checker'
+app/controllers/book_lists_controller.rb:15:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:57:36 -0400
+Processing by BookListsController#index as HTML
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/book_lists_controller.rb:51:in `checker'
+app/controllers/book_lists_controller.rb:15:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:57:58 -0400
+Processing by BookListsController#index as HTML
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/book_lists_controller.rb:52:in `checker'
+app/controllers/book_lists_controller.rb:15:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:58:00 -0400
+Processing by BookListsController#index as HTML
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/book_lists_controller.rb:52:in `checker'
+app/controllers/book_lists_controller.rb:15:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 15:59:30 -0400
+Processing by BookListsController#index as HTML
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/book_lists_controller.rb:52:in `checker'
+app/controllers/book_lists_controller.rb:15:in `index'
+Started PUT "/__web_console/repl_sessions/781a7a4d353e8f8bdd4db2dabc2fb7b0" for 127.0.0.1 at 2018-06-21 15:59:56 -0400
+Started PUT "/__web_console/repl_sessions/781a7a4d353e8f8bdd4db2dabc2fb7b0" for 127.0.0.1 at 2018-06-21 16:00:00 -0400
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE BookList Load (0.1ms)[0m  [1m[34mSELECT  `book_lists`.* FROM `book_lists` LIMIT 11[0m
+  ↳ /home/rishabh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 16:01:07 -0400
+Processing by BookListsController#index as HTML
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/book_lists_controller.rb:51:in `checker'
+app/controllers/book_lists_controller.rb:15:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 16:01:34 -0400
+Processing by BookListsController#index as HTML
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 176ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 16:02:08 -0400
+Processing by BookListsController#index as HTML
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 173ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 16:02:11 -0400
+Processing by BookListsController#index as HTML
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 182ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 16:02:12 -0400
+Processing by BookListsController#index as HTML
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 180ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 16:02:12 -0400
+Processing by BookListsController#index as HTML
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 189ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 16:02:52 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 3.2ms)
+
+
+  
+TypeError (exception class/object expected):
+  
+app/controllers/book_lists_controller.rb:47:in `raise'
+app/controllers/book_lists_controller.rb:47:in `block (2 levels) in string_generator'
+app/controllers/book_lists_controller.rb:31:in `block in string_generator'
+app/controllers/book_lists_controller.rb:30:in `string_generator'
+app/controllers/book_lists_controller.rb:16:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 16:03:04 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 3.7ms)
+
+
+  
+RuntimeError (1):
+  
+app/controllers/book_lists_controller.rb:47:in `block (2 levels) in string_generator'
+app/controllers/book_lists_controller.rb:31:in `block in string_generator'
+app/controllers/book_lists_controller.rb:30:in `string_generator'
+app/controllers/book_lists_controller.rb:16:in `index'
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 16:03:25 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.3ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 589ms (Views: 1.6ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/book_lists" for 127.0.0.1 at 2018-06-21 16:06:17 -0400
+Processing by BookListsController#index as HTML
+  [1m[36mBookList Load (0.2ms)[0m  [1m[34mSELECT `book_lists`.* FROM `book_lists`[0m
+  ↳ app/controllers/book_lists_controller.rb:30
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 1[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 2[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 6[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 7[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 3[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 8[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 9[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT `courses`.* FROM `courses` WHERE `courses`.`book_list_id` = 4[0m
+  ↳ app/controllers/book_lists_controller.rb:31
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 10[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`course_id` = 11[0m
+  ↳ app/controllers/book_lists_controller.rb:34
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 7633ms (Views: 2.2ms | ActiveRecord: 9.0ms)
+
+

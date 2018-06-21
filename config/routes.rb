@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 	root 'terms#index'
+	#require 'sidekiq/web'
+	#mount Sidekiq::Web => "/sidekiq"
   resources :courses do 
   	resources :book
   end

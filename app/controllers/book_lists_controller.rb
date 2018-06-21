@@ -1,21 +1,32 @@
-class BookLitssController < ApplicationController
+class BookListsController < ApplicationController
   before_action :set_book_list, only: [:show, :edit, :update, :destroy]
 
   # GET /book_lists
   # GET /book_lists.json
   def index
     @book_lists = BookList.all
-    string_generator()
-    render plain: @entries
+    #file_generator
+    base_uri = 'https://hvt2-1519495006532.firebaseio.com/'
+    @firebase  = Firebase::Client.new(base_uri)
+    @response = @firebase.push("Rishabh", {:counter => 0})
+    @resp =  @response.body
+    @child_key = @resp["name"]
+    #string_generator()
+    #checker
+    string_generator
+    render plain: @child_key
+    #render plain: @entries
   end
 
   # does the same as string_generator
   # given book_list_id ( Integer )
 
+#
 
 # TODO clean up
   def string_generator
     @entries = ""
+    counter = 0
     @book_lists.each { |book_list|
       book_list.courses.each { |course|
         department = course.department
@@ -32,20 +43,33 @@ class BookLitssController < ApplicationController
           @entries += sprintf("%-10s", book.publisher) 
         }
         @entries += "\n" #creating new line after every entry
-        #increment some instance variable
-        # call a func
+        counter+=1; # number of book entries
+        sleep(1)
+        checker(counter)
       }
     }
   end
 
-  def some_func
-    # change the text on user
-    @rishabh = "Rishabh"
+  def checker(to_update)
+    @firebase.update('',{
+      "Rishabh/#{@child_key}" => true,
+      "Rishabh/#{@child_key}" => to_update
+    })
   end
+
+
+
+#
+  def listener
+  end
+
 
 # 3) make this asynchronously
   def file_generator
-    send_data(@entries, :filename => "textfile.txt")
+    data = ReportWorker.perform_async(@book_lists)
+    raise data.inspect
+    #render plain: data
+    #send_data(data, :filename => "textfile.txt")
   end
 
   # GET /book_lists/1
@@ -112,4 +136,4 @@ class BookLitssController < ApplicationController
     def book_list_params
       params.require(:book_list).permit(:term_id)
     end
-  end
+end
