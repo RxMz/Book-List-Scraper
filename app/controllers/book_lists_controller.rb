@@ -8,13 +8,14 @@ class BookListsController < ApplicationController
     #file_generator
     base_uri = 'https://hvt2-1519495006532.firebaseio.com/'
     @firebase  = Firebase::Client.new(base_uri)
-    @response = @firebase.push("Rishabh", {:counter => 0})
-    @resp =  @response.body
-    @child_key = @resp["name"]
+    #@response = @firebase.push("Rishabh", {:counter => 0})
+    #@resp =  @response.body
+    #@child_key = @resp["name"]
     #string_generator()
     #checker
-    string_generator
-    render plain: @child_key
+    string_generator 
+    #updater
+    #render plain: @child_key
     #render plain: @entries
   end
 
@@ -45,10 +46,19 @@ class BookListsController < ApplicationController
         @entries += "\n" #creating new line after every entry
         counter+=1; # number of book entries
         sleep(1)
-        checker(counter)
+        #checker(counter) #CHANGE THIS
+        newchecker(counter)
       }
     }
   end
+
+  def newchecker(to_update)
+    @firebase.update('',{
+      "Rishabh" => true,
+      "Rishabh" => to_update
+    })
+  end
+
 
   def checker(to_update)
     @firebase.update('',{
